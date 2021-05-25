@@ -39,5 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:gravity="fill"
+        android:clickable="true"
+        android:padding="10dip"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 </GridLayout>
