@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidAssignments">
         <activity android:name=".ListItemsActivity">
-            uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         </activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
