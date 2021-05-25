@@ -10,4 +10,13 @@
     <string name="switch_text">Co to robi?</string>
     <string name="checkbox_text">Pole Wyboru</string>
     <string name="radio_btn_text">Przycisk Radiowy</string>
+
+    <string name="login_button">Zaloguj Sie</string>
+    <string name="dialog_title">Zakonczyc czynnosc</string>
+    <string name="dialog_message">Chcesz skonczyc?</string>
+    <string name="ok">Tak</string>
+    <string name="cancel">Anuluj</string>
+    <string name="response">Oto moja odpowiedz</string>
+    <string name="switch_toast_message_on">Przelacznik jest wlaczony</string>
+    <string name="switch_toast_message_off">Przelacznik jest wylaczony</string>
 </resources>
