@@ -3,4 +3,11 @@
     <string name="app_name">AndroidAssignments</string>
     <string name="hello_message">Dzein Dobry!</string>
     <string name="ButtonText">Jestem Guzikiem!</string>
+
+    <string name="login">Zaloguj Sie</string>
+    <string name="edit_message">Nazwa Logowania</string>
+    <string name="password">Haslo</string>
+    <string name="switch_text">Co to robi?</string>
+    <string name="checkbox_text">Pole Wyboru</string>
+    <string name="radio_btn_text">Przycisk Radiowy</string>
 </resources>
