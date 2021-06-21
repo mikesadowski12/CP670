@@ -19,4 +19,7 @@
     <string name="response">Oto moja odpowiedz</string>
     <string name="switch_toast_message_on">Przelacznik jest wlaczony</string>
     <string name="switch_toast_message_off">Przelacznik jest wylaczony</string>
+
+    <string name="start_chat">Rozpocznij Czat</string>
+    <string name="send_button">Wyslac</string>
 </resources>

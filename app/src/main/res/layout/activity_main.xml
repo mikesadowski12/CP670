@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_message"
@@ -23,4 +24,17 @@
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="384dp" />
 
+    <Button
+        android:id="@+id/startChatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="108dp"
+        android:text="@string/start_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    app:layout_constraintBottom_toTopOf="@+id/textview"-->
