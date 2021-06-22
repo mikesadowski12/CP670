@@ -22,4 +22,21 @@
 
     <string name="start_chat">Rozpocznij Czat</string>
     <string name="send_button">Wyslac</string>
+    <string name="test_toolbar">Testuj pasek narzedzi</string>
+    <string name="action_one">Jeden</string>
+    <string name="action_two">Dwa</string>
+    <string name="action_three">Trzy</string>
+    <string name="action_about">Zrobione przez</string>
+    <string name="tb_dialog_title">Chcesz wrocic?</string>
+    <string name="new_message">Nowa wiadomosc</string>
+
+    <string name="title_activity_test_toolbar">TestToolbar</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

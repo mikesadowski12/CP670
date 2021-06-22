@@ -41,7 +41,18 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, ChatWindow.class);
                 startActivity(intent);
             }
-        }) ;
+        });
+
+        Button testToolbarButton = findViewById(R.id.testToolbar);
+        testToolbarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(ACTIVITY_NAME, "Clicked Test Toolbar");
+
+                Intent intent = new Intent(MainActivity.this, TestToolBar.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
