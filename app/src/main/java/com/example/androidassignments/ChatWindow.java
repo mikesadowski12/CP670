@@ -16,8 +16,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.content.ContentValues;
+
 public class ChatWindow extends AppCompatActivity {
     protected static final String ACTIVITY_NAME = "ChatWindow";
+    static final String GET_MESSAGES = "SELECT KEY_MESSAGE FROM MESSAGES";
+    protected static SQLiteDatabase database;
     ListView chatView;
     EditText chatText;
     Button sendButton;
@@ -35,6 +41,21 @@ public class ChatWindow extends AppCompatActivity {
         sendButton = findViewById(R.id.sendButton);
         chatMessages = new ArrayList<>();
 
+        ChatDatabaseHelper dbHelper = new ChatDatabaseHelper(this);
+        database = dbHelper.getWritableDatabase();
+
+        final Cursor cursor = database.rawQuery(GET_MESSAGES,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            Log.i(ACTIVITY_NAME, "SQL MESSAGE:" + cursor.getString( cursor.getColumnIndex( ChatDatabaseHelper.KEY_MESSAGE) ) );
+            chatMessages.add(cursor.getString(cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)));
+            cursor.moveToNext();
+        }
+        Log.i(ACTIVITY_NAME, "Cursor’s  column count =" + cursor.getColumnCount() );
+        for (int i = 0; i <cursor.getColumnCount();i++){
+            Log.i(ACTIVITY_NAME, "Column Name: "+ cursor.getColumnName(i));
+        }
+
         messageAdapter = new ChatAdapter(this);
         chatView.setAdapter(messageAdapter);
 
@@ -42,6 +63,9 @@ public class ChatWindow extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 chatMessages.add(chatText.getText().toString());
+                ContentValues values = new ContentValues();
+                values.put(ChatDatabaseHelper.KEY_MESSAGE, chatText.getText().toString());
+                database.insert(ChatDatabaseHelper.TABLE_NAME, "NullPlaceHolder",values);
                 messageAdapter.notifyDataSetChanged(); //this restarts the process of getCount()/getView()
                 chatText.setText("");
             }
@@ -103,6 +127,7 @@ public class ChatWindow extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        database.close();
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
 }
